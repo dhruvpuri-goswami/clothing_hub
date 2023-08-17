@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 17, 2023 at 08:25 PM
+-- Generation Time: Aug 17, 2023 at 08:37 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -45,7 +45,8 @@ CREATE TABLE `orders` (
 INSERT INTO `orders` (`orderID`, `username`, `address`, `city`, `state`, `zip`, `totalAmount`, `orderDate`) VALUES
 (4, 'dhruvpuri', 'White solitair', 'Ahemdabad', 'Alabama', '39452', 169.93, '2023-08-17 11:46:49'),
 (5, 'dhruvpuri', 'White solitair', 'Ahemdabad', 'Alabama', '39452', 169.93, '2023-08-17 11:48:17'),
-(6, 'dhruvpuri', 'White solitair', 'Ahemdabad', 'Alabama', '39452', 169.93, '2023-08-17 11:49:19');
+(6, 'dhruvpuri', 'White solitair', 'Ahemdabad', 'Alabama', '39452', 169.93, '2023-08-17 11:49:19'),
+(7, 'dhruv', 'White solitair', 'Ahemdabad', 'Alabama', '39452', 424.92, '2023-08-17 15:04:59');
 
 -- --------------------------------------------------------
 
@@ -98,7 +99,12 @@ INSERT INTO `product_order` (`id`, `orderID`, `productID`, `quantity`, `priceAtT
 (1, 6, 12, 4, 19.99),
 (2, 6, 15, 1, 24.99),
 (3, 6, 10, 1, 49.99),
-(4, 6, 17, 1, 14.99);
+(4, 6, 17, 1, 14.99),
+(5, 7, 11, 1, 39.99),
+(6, 7, 13, 2, 59.99),
+(7, 7, 10, 2, 49.99),
+(8, 7, 15, 1, 24.99),
+(9, 7, 14, 2, 69.99);
 
 -- --------------------------------------------------------
 
@@ -112,13 +118,6 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `email` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`userID`, `username`, `password`, `email`) VALUES
-(1, 'dhruvpuri', '$2y$10$uuup4thJZh4WMOv6.XDgJ.f9o/kSl2Umk.m8HC.LnkYyAAo3yhHjq', 'goswamidj16@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -157,7 +156,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `orderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `orderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -169,13 +168,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `product_order`
 --
 ALTER TABLE `product_order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables

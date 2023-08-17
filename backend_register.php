@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result) {
         header("Location: login.php");  
     } else {
-        echo "There was an error in registration!";
+        echo "<script>alert('User is already registerd !');</script>";
     }
 }
 
